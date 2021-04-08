@@ -31,7 +31,7 @@ app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use(express.static(__dirname + '/public'));
 
 // Conexion con mongo
-mongoose.connect('mongodb://localhost/BBDD', { useNewUrlParser: true, useUnifiedTopology: true }, (err, res) => {
+mongoose.connect('mongodb+srv://admin:admin@cluster0.zpegg.mongodb.net/BBDD?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, (err, res) => {
     if (err) {
         console.log('ERROR: connecting to Database. ' + err);
     } else {
